@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: psycopg2-lambda-layer
+
+Resources:
+  Psycopg2Layer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      ContentUri: psycopg2
+      CompatibleRuntimes:
+        - python3.9
+    Metadata:
+      BuildMethod: makefile
